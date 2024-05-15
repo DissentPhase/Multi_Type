@@ -5,14 +5,14 @@
     margin:0;
 }
 .container{
-    min-height:100vh;
+    min-height:200vh;
     display:flex;
     justify-content:center;
     align-items:center;
     background-color:#eee;
 }
 .container .card{
-    height:500px;
+    height:600px;
     width:800px;
     background-color:#F6F3EB;
     position:relative;
@@ -144,7 +144,7 @@
     width:30px;
     background-color:#ccc;
     border-radius:50%;
-    color:yellow;
+    color:#2382A1;
     font-size:19px;
 }
 .text{
@@ -157,7 +157,7 @@
     margin-top:10px;
     font-size:13px;
     font-weight:700;
-    color:#cbced4;
+    color:#064078;
 }
 .input-text{
     margin:30px 0;
@@ -175,7 +175,7 @@
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #F6F3EB;
+    background-color: #fff;
 }
 .input-div input[type="file"] + span {
     pointer-events: none; /* Menonaktifkan interaksi dengan teks */
@@ -185,7 +185,7 @@
     border: none;
     border-radius: 5px;
     background-color: #002053;
-    color: #F6F3EB;
+    color: #fff;
     font-size: 10px;
     cursor: pointer;
     position: relative; /* Menjadikan posisi relatif untuk mengatur z-index */
@@ -195,7 +195,7 @@
     display: block;
     margin-top: 5px;
     font-size: 14px;
-    color: #666;
+    color: #000;
 }
 
 input[type="text"]{
