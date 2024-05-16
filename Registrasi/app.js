@@ -2,6 +2,7 @@ var next_click = document.querySelectorAll(".next_button");
 var main_form = document.querySelectorAll(".main");
 var step_list = document.querySelectorAll(".progress-bar li");
 var num = document.querySelector(".step-number");
+const plans = document.querySelectorAll(".plan-card");
 let formnumber = 0;
 
 next_click.forEach(function(next_click_form) {
@@ -15,6 +16,7 @@ next_click.forEach(function(next_click_form) {
         contentchange();
     });
 });
+
 
 var back_click = document.querySelectorAll(".back_button");
 back_click.forEach(function(back_click_form) {
@@ -75,6 +77,15 @@ function contentchange() {
     });
     step_num_content[formnumber].classList.add('active');
     step_num_content[formnumber].classList.remove('d-none');
+}
+function selectPayment(paymentMethod) {
+    if (paymentMethod === 'bank') {
+        // Redirect to bank digital payment page
+        window.location.href = 'link_to_bank_payment_page';
+    } else if (paymentMethod === 'paypal') {
+        // Redirect to PayPal payment page
+        window.location.href = 'link_to_paypal_payment_page';
+    }
 }
 
 function validateform() {

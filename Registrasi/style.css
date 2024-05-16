@@ -159,6 +159,11 @@
     font-weight:700;
     color:#064078;
 }
+.payment-options label {
+    display: block;
+    margin-bottom: 10px; /* Atur jarak antar opsi */
+}
+
 .input-text{
     margin:30px 0;
      display:flex;
