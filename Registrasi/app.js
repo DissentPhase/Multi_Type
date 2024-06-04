@@ -98,11 +98,11 @@ function validateform() {
             } else if (validate_input.type === 'email' && !validate_input.checkValidity()) {
                 validate = false;
                 validate_input.classList.add('warning');
-                alert("Please enter a valid email address, ensure your email address follows the format, example123@example.com");
+                alert("Please enter a valid email address");
             } else if (validate_input.type === 'tel' && !validate_input.checkValidity()) {
                 validate = false;
                 validate_input.classList.add('warning');
-                alert("Phone number must be between 10 to 15 digits and can start with +");
+                alert("Please enter a valid Phone Number");
             }  else if (validate_input.id === 'Photo') { 
                 const photoInput = validate_input;
                 if (photoInput.files && photoInput.files.length > 3) {
