@@ -75,11 +75,11 @@
                     </div>
                     <div class="input-text">
                         <div class="input-div">
-                            <input type="text" required require>
+                            <input type="tel" required pattern="\+?[0-9]{10,15}" title="Phone number must be between 10 to 15 digits and can start with +">
                             <span>Phone number</span>
                         </div>
                         <div class="input-div">
-                            <input type="text" required require>
+                            <input type="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address">
                             <span>E-mail Address</span>
                         </div>
                     </div>
@@ -137,7 +137,7 @@
                     <div class="input-text">
                         <div class="input-div">
                             <input type="file" required name="student_id_card" id="student_id_card" require>
-                            <label>Student ID Card/LOA (PDF)</label>
+                            <label>Student ID Card/KRS (PDF)</label>
                         </div>
                     </div>
                     <div class="buttons button_space">
