@@ -204,10 +204,13 @@
 }
 
 .input-div span {
-    display: block;
-    margin-top: 5px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
     font-size: 14px;
     color: #000;
+    transition: all 0.3s ease;
+    pointer-events: none;
 }
 
 input[type="text"],
@@ -246,16 +249,17 @@ select {
 }
 
 .input-div input:focus ~ span,
-.input-div input:valid ~ span {
-    top: -23px;
-    left: 6px;
-    font-size: 14px;
+.input-div input:not(:placeholder-shown) ~ span {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
     padding: 0 4px;
-    border-radius: 3px;
+    background: #F6F3EB; 
 }
 
 input:focus,
-input:valid {
+input:valid,
+input:invalid {
     border-color: #108346;
 }
 
@@ -357,6 +361,22 @@ input:invalid ~ span {
     stroke-dashoffset: 48;
     animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
 }
+
+.custom-alert {
+    position: absolute;
+    background: white;
+    border: 1px solid #cc0;
+    padding: 5px;
+    border-radius: 3px;
+    z-index: 100;
+    top: -30px;
+    left: 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-size: 12px; 
+}
+
+
+
 
 @keyframes stroke {
     100% {

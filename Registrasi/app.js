@@ -51,6 +51,14 @@ share.addEventListener('click', function() {
     share.classList.toggle('share');
 });
 
+
+var phoneNumberInput = document.querySelector(".main.active input[type='tel']");
+phoneNumberInput.addEventListener('input', function(event) {
+    var inputValue = event.target.value;
+    var filteredValue = inputValue.replace(/[^\d\+\-\(\)\s]/g, '');
+    event.target.value = filteredValue;
+});
+
 function updateform() {
     main_form.forEach(function(mainform_number) {
         mainform_number.classList.remove('active');
@@ -80,6 +88,21 @@ function contentchange() {
     step_num_content[formnumber].classList.remove('d-none');
 }
 
+function showAlert(element, message) {
+    var existingAlert = element.parentNode.querySelector('.custom-alert');
+    if (existingAlert) {
+        existingAlert.remove();
+    }
+    var alertBox = document.createElement('div');
+    alertBox.className = 'custom-alert';
+    alertBox.innerText = message;
+    element.parentNode.appendChild(alertBox);
+
+    setTimeout(function() {
+        alertBox.remove();
+    }, 3000);
+}
+
 function validateform() {
     let validate = true;
     var validate_inputs = document.querySelectorAll(".main.active input, .main.active select");
@@ -90,28 +113,42 @@ function validateform() {
             if (validate_input.tagName === 'SELECT' && validate_input.value === '') {
                 validate = false;
                 validate_input.classList.add('warning');
-                alert("Please select a sub-theme.");
+                showAlert(validate_input, "Please select a sub-theme.");
             } else if (validate_input.value.length == 0) {
                 validate = false;
                 validate_input.classList.add('warning');
-                alert("Please fill out all required fields.");
+                showAlert(validate_input, "Please fill out all required fields.");
             } else if (validate_input.type === 'email' && !validate_input.checkValidity()) {
                 validate = false;
                 validate_input.classList.add('warning');
-                alert("Please enter a valid email address");
+                showAlert(validate_input, "Please enter a valid email address");
             } else if (validate_input.type === 'tel' && !validate_input.checkValidity()) {
                 validate = false;
                 validate_input.classList.add('warning');
-                alert("Please enter a valid Phone Number");
-            }  else if (validate_input.id === 'Photo') { 
+                showAlert(validate_input, "Please enter a valid Phone Number");
+            } else if (validate_input.id === 'Photo') { 
                 const photoInput = validate_input;
                 if (photoInput.files && photoInput.files.length > 3) {
-                  validate = false;
-                  photoInput.classList.add('warning');
-                  alert("You can only upload a maximum of 3 photos.");
+                    validate = false;
+                    photoInput.classList.add('warning');
+                    showAlert(validate_input, "You can only upload a maximum of 3 photos.");
+                }
+            } else if (validate_input.type === 'checkbox') {
+                var checkboxes = document.querySelectorAll(".main.active input[type='checkbox']");
+                var isChecked = false;
+                checkboxes.forEach(function(checkbox) {
+                    if (checkbox.checked) {
+                        isChecked = true;
+                    }
+                });
+
+                if (!isChecked) {
+                    validate = false;
+                    showAlert(validate_input, "Please select at least one payment method.");
                 }
             }
         }
     });
+
     return validate;
 }
