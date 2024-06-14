@@ -38,21 +38,21 @@
                     </div>
                     <div class="input-text">
                         <div class="input-div">
-                            <input type="text" required require id="user_name">
+                            <input type="text" name="name" required require id="user_name">
                             <span>Your Name</span>
                         </div>
                         <div class="input-div"> 
-                            <input type="text" required>
+                            <input type="text" name="institution" required>
                             <span>Institution</span>
                         </div>
                     </div>
                     <div class="input-text">
                         <div class="input-div">
-                            <input type="tel" required pattern="\+?[0-9]{10,15}" title="Phone number must be between 10 to 15 digits and can start with +">
+                            <input type="tel" name="phoneNumber" required pattern="\+?[0-9]{10,15}" title="Phone number must be between 10 to 15 digits and can start with +">
                             <span>Phone number</span>
                         </div>
                         <div class="input-div">
-                            <input type="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address">
+                            <input type="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address">
                             <span>E-mail Address</span>
                         </div>
                     </div>
@@ -69,25 +69,25 @@
                     </div>
                     <div class="input-text">
                         <div class="input-div">
-                            <input type="file" required name="Flyer" id="Flyer">
+                            <input type="file" name="proofOfUploadingFlyersOnIgStory" required  id="Flyer">
                             <label>Flyer on instagram story</label>
                         </div>
                     </div>
                     <div class="input-text">
                         <div class="input-div">
-                            <input type="file" required name="Twibbon" id="Twibbon">
+                            <input type="file" name="proofOfUploadingTwibbonOnIgFeed" required name="Twibbon" id="Twibbon">
                             <label>Twibbon</label>
                         </div>
                     </div>
                     <div class="input-text">
                         <div class="input-div">
-                            <input type="file" required name="flyer" id="flyer">
+                            <input type="file" required name="proofOfSharingFlyers" id="flyer">
                             <label>Flyer on Group Chats</label>
                         </div>
                     </div>
                     <div class="input-text">
                         <div class="input-div">
-                            <input type="file" required name="student_id_card" id="student_id_card">
+                            <input type="file" required name="studentIdCard"id="student_id_card">
                             <label>Student ID Card (PDF)</label>
                         </div>
                     </div>
@@ -137,7 +137,7 @@
                     </div>
                     <div class="input-text">
                         <div class="input-div">
-                            <input type="file" accept="image/png" required name="Payment" id="Payment">
+                            <input type="file" name="paymentProof" accept="image/png" required name="Payment" id="Payment">
                             <label for="Payment">Payment Proof (PNG)</label>
                         </div>
                     </div>
@@ -178,10 +178,17 @@
                      
                     <div class="text congrats">
                         <h2>Congratulations!</h2>
-                        <p>Thanks Energizen. <span class="shown_name"></span> your information has been submitted successfully. Join the WhatsApp group <a href="https://chat.whatsapp.com/GjWHPbt6DsSFwZsiT9t2uC">here</a>.</p>
+                          Thanks Energizen. <span class="shown_name"></span> your
+                          information has been submitted successfully. Join the WhatsApp
+                          group
+                          <a href="https://chat.whatsapp.com/GjWHPbt6DsSFwZsiT9t2uC">here</a>.
+                        </p>
+                      </div>
                     </div>
-
+                </form>
             </div>
         </div>
     </div>
-</div>
+<script src="./photograph.js"></script>
+</body>
+</html>

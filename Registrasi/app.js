@@ -51,12 +51,14 @@ share.addEventListener('click', function() {
     share.classList.toggle('share');
 });
 
-
-var phoneNumberInput = document.querySelector(".main.active input[type='tel']");
-phoneNumberInput.addEventListener('input', function(event) {
-    var inputValue = event.target.value;
-    var filteredValue = inputValue.replace(/[^\d\+\-\(\)\s]/g, '');
-    event.target.value = filteredValue;
+// Perbaikan untuk input nomor telepon
+var phoneNumberInput = document.querySelectorAll("input[type='tel']");
+phoneNumberInput.forEach(function(input) {
+    input.addEventListener('input', function(event) {
+        var inputValue = event.target.value;
+        var filteredValue = inputValue.replace(/[^\d\+\-\(\)\s]/g, '');
+        event.target.value = filteredValue;
+    });
 });
 
 function updateform() {
