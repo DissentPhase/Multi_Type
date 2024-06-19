@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
       try {
         const response = await fetch(
-          "http://localhost:3000/api/v1/siclus/study-case",
+          "https://sreunhas.id/api/v1/siclus/study-case",
           {
             method: "POST",
             body: formData,

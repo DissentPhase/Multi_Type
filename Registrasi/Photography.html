@@ -19,27 +19,27 @@
                         </div>
                         <div class="steps-content">
                             <h3>Step <span class="step-number">1</span></h3>
-                            <p class="step-number-content active">Enter your team information to participate in SICLUS 2024.</p>
-                        </div>
-                        <ul class="progress-bar">
-                            <li class="active">Team Information</li>
-                            <li>Team Leader</li>
-                            <li>Members</li>
-                            <li>Proof</li>
+                            <p class="step-number-content active">Enter your information to participate in SICLUS 2024.</p>
+                            </div>
+                            <ul class="progress-bar">
+                                <li class="active">Your Information</li>
+                                <li>Proof</li>
+                                <li>Payment</li>
+                                <li>Submission</li>
                         </ul>
                     </div>
                     <div class="right-side">
-                        <form id="study-case-form" enctype="multipart/form-data">
+                        <form id="photography-form" enctype="multipart/form-data">
                         <div class="main active">
                             <small><i class="fa fa-envira"></i></small>
                             <div class="text">
-                                <h2>Your team Information</h2>
-                                <p>Enter your team information to participate in SICLUS 2024.</p>
+                                <h2>Self Bio</h2>
+                                <p>Inform us about yourself.</p>
                             </div>
                             <div class="input-text">
                                 <div class="input-div">
-                                    <input type="text" name="teamName" required require id="user_name">
-                                    <span>Team Name</span>
+                                    <input type="text" name="name" required id="user_name">
+                                    <span>Your Name</span>
                                 </div>
                                 <div class="input-div"> 
                                     <input type="text" name="institution" required>
@@ -48,74 +48,15 @@
                             </div>
                             <div class="input-text">
                                 <div class="input-div">
-                                    <input type="text" name="country" required require>
-                                    <span>Country</span>
-                                </div>
-                            </div>
-                            <div class="buttons">
-                                <button type="button" class="next_button">Next Step</button>
-                            </div>
-                        </div>
-                        <div class="main">
-                            <small><i class="fa fa-envira"></i></small>
-                            <div class="text">
-                                <h2>Team Leader</h2>
-                                <p>Inform us about your team.</p>
-                            </div>
-                            <div class="input-text">
-                                <div class="input-div">
-                                    <input type="text" name="teamLeaderName" required require>
-                                    <span>Team Leader Name</span>
-                                </div>
-                                <div class="input-div"> 
-                                    <input type="text" name="teamLeaderMajor" required>
-                                    <span> Major</span>
-                                </div>
-                            </div>
-                            <div class="input-text">
-                                <div class="input-div">
-                                    <input type="tel" name="teamLeaderPhoneNumber" required pattern="\+?[0-9]{10,15}" title="Phone number must be between 10 to 15 digits and can start with +">
+                                    <input type="tel" name="phoneNumber" required pattern="\+?[0-9]{10,15}" title="Phone number must be between 10 to 15 digits and can start with +">
                                     <span>Phone number</span>
                                 </div>
                                 <div class="input-div">
-                                    <input type="email" name="teamLeaderEmail" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address">
+                                    <input type="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address">
                                     <span>E-mail Address</span>
                                 </div>
-                            </div>           
-                            <div class="buttons button_space">
-                                <button type="button" class="back_button">Back</button>
-                                <button type="button" class="next_button">Next Step</button>
                             </div>
-                        </div>
-
-                        <div class="main">
-                            <small><i class="fa fa-envira"></i></small>
-                            <div class="text">
-                                <h2>Member</h2>
-                                <p>Give us information about your team members</p>
-                            </div>
-                            <div class="input-text">
-                                <div class="input-div">
-                                    <input type="text" name="firstMemberName" required>
-                                    <span>First Member name</span>
-                                </div>
-                                <div class="input-div"> 
-                                    <input type="text" name="firstMemberMajor" required>
-                                    <span>Major</span>
-                                </div>
-                            </div>
-                            <div class="input-text">
-                                <div class="input-div">
-                                    <input type="text" name="secondMemberName" required>
-                                    <span>Second Member Name</span>
-                                </div>
-                                <div class="input-div">
-                                    <input type="text" name="secondMemberMajor" required>
-                                    <span>Major</span>
-                                </div>
-                            </div>
-                            <div class="buttons button_space">
-                                <button type="button" class="back_button">Back</button>
+                            <div class="buttons">
                                 <button type="button" class="next_button">Next Step</button>
                             </div>
                         </div>
@@ -152,6 +93,80 @@
                             </div>
                             <div class="buttons button_space">
                                 <button type="button" class="back_button">Back</button>
+                                <button type="button" class="next_button">Next Step</button>
+                            </div>
+                        </div>
+                         
+                        <div class="main">
+                            <small><i class="fa fa-envira"></i></small>
+                            <div class="text">
+                                <h2>Payment Proof</h2>
+                                <p>Upload your payment proof here.</p>
+                            </div>
+                            <div class="payment-options">
+                                <label>
+                                    <input type="checkbox" name="payment_method" value="bank" required>
+                                    <span class="payment-method">
+                                        <i class="fa fa-credit-card-alt"></i> Bank Digital Payment
+                                    </span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="payment_method" value="paypal" required>
+                                    <span class="payment-method">
+                                        <i class="fa fa-paypal"></i> PayPal
+                                    </span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="payment_method" value="E-wallet" required>
+                                    <span class="payment-method">
+                                        <i class="fa fa-money"></i> E-Wallet
+                                    </span>
+                                </label>
+                            </div>                    
+                            <div class="input-text">
+                                <div class="input-div">
+                                    <input type="text" required>
+                                    <span>Account Name</span>
+                                </div>
+                            </div>
+                            <div class="input-text" id="bankField" style="display: none;">
+                                <div class="input-div">
+                                    <input type="text">
+                                    <span>Bank (If You use this method)</span>
+                                </div>
+                            </div>
+                            <div class="input-text">
+                                <div class="input-div">
+                                    <input type="file" name="paymentProof" accept="image/png" required id="Payment">
+                                    <label for="Payment">Payment Proof (PNG)</label>
+                                </div>
+                            </div>
+                            <div class="buttons button_space">
+                                <button type="button" class="back_button">Back</button>
+                                <button type="button" class="next_button">Next Step</button>
+                            </div>
+                        </div>
+                        
+                        <div class="main">
+                            <small><i class="fa fa-envira"></i></small>
+                            <div class="text">
+                                <h2>Submission</h2>
+                                <p>Submit your work</p>
+                            </div>
+                            <div class="input-text">
+                                <div class="input-div">
+                                    <label for="Photo">Photograph (PNG)</label>
+                                    <input type="file" accept="image/png" required name="Photograph" id="Photograph">
+                                </div>
+                            </div>
+                            <div class="input-text">
+                                <div class="input-div">
+                                    <input type="file" required name="description" id="description">
+                                    <label>Description</label>
+                                </div>
+                            </div>
+                            <div class="buttons button_space">
+                                <button type="button" class="back_button">Back</button>
                                 <button type="submit" class="submit_button">Submit</button>
 
                             </div>
@@ -175,6 +190,6 @@
                     </div>
                 </div>
             </div>
-        <script src="./study.js"></script>
+        <script src="./Photograph.js"></script>
     </body>
 </html>
